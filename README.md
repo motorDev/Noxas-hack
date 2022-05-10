@@ -1,8 +1,15 @@
-# Meteor Addon Template
+package meteordevelopment.addons.template.modules.hud;
 
-A template to allow easy usage of the Meteor Addon API.
+import meteordevelopment.meteorclient.systems.modules.render.hud.HUD;
+import meteordevelopment.meteorclient.systems.modules.render.hud.modules.DoubleTextHudElement;
 
-### How to use:  
-- Clone this project
-- Use this template to create new modules/commands
-- Run the mod with Meteor.
+public class HudExample extends DoubleTextHudElement {
+public HudExample(HUD hud) {
+super(hud, "hud-example", "Description", "Static left text: ", false);
+}
+
+    @Override
+    protected String getRight() {
+        return "Dynamic right text";
+    }
+}
